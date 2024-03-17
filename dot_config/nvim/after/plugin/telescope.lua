@@ -8,6 +8,13 @@ end)
 
 require("telescope").setup({
 	defaults = {
-		file_ignore_patterns = { "node_modules", ".git" },
-	},
+   -- path_display = { shorten = 10 },
+    path_display = { truncate = 5 },
+    layout_config = {
+      prompt_position = "bottom",
+      width = 0.95,
+      height = 0.95,
+    },
+    file_ignore_patterns = { "node_modules", ".git" },
+  }
 })
