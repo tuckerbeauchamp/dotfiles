@@ -1,5 +1,14 @@
 require("neo-tree").setup({
+
+  window = {
+    width = 40,
+    position = "right",
+  },
 	filesystem = {
+    follow_current_file = {
+      enabled = true,
+      leave_dirs_open = false,
+    },
 		filtered_items = {
 			visible = true,
 			show_hidden_count = true,
@@ -10,5 +19,6 @@ require("neo-tree").setup({
 				".git",
 			},
 		},
+    use_libuv_file_watcher = true,
 	},
 })
