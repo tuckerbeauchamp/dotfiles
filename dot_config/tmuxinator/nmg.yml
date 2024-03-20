@@ -45,7 +45,7 @@ startup_window: editor
 # attach: false
 
 windows:
-  - editor: nvim .
+  - editor: cd consumer-ui && nvim .
   - consumer-ui: cd consumer-ui && npm run start:standalone
   - backend-servers:
       layout: tiled
