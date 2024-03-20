@@ -15,5 +15,12 @@ brew install tmuxinator
 # install fnm
 curl -fsSL https://fnm.vercel.app/install | bash --skip-shell
 # install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+if [ -d "~/.fzf" ]; then
+  echo "fzf already installed"
+else
+  # Take action if $DIR exists. #
+  echo "Installing config files in ${DIR}..."
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
+  yes | ~/.fzf/install
+fi
 
