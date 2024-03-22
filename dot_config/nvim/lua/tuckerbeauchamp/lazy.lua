@@ -63,10 +63,10 @@ return require("lazy").setup({
 		ft = { "markdown" },
 	},
 
-	-- Git Gutter
+	-- Git Gutter / Shows git changes in the gutter
 	"airblade/vim-gitgutter",
 
-	-- Copilot
+	-- Copilot / Autocompletion
 	"github/copilot.vim",
 
 	-- Keep current context above cursor
@@ -84,8 +84,11 @@ return require("lazy").setup({
 	-- Allow text wrapping based off symbol
 	"tpope/vim-surround",
 
-	-- Linter
-	"mfussenegger/nvim-lint",
+	-- Linting
+	"dense-analysis/ale",
+
+	-- Diagnostic and LSP viewer
+	{ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" },
 
 	-- web dev icons for below packages. trying to prevent depency issue
 	"nvim-tree/nvim-web-devicons",
@@ -127,13 +130,6 @@ return require("lazy").setup({
 		},
 	},
 
-	-- Auto create pairs ()/{} etc..
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	},
 	-- Status Line
 	{
 		"nvim-lualine/lualine.nvim",
