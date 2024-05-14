@@ -32,3 +32,8 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- UUID generator
+vim.cmd([[
+  command! InsertUUID execute "normal! i" . trim(system("uuidgen"))
+]])
