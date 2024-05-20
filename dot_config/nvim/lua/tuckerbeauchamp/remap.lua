@@ -3,9 +3,6 @@
 -- Set mapleader to space
 vim.g.mapleader = " "
 
--- pv to open open ex mode
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Allow highlighted text to be moved with J and K in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -27,6 +24,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Create tab
 vim.api.nvim_set_keymap("n", "<Leader>t", ":tabnew<CR>", { noremap = true, silent = true })
-
--- Toggle popup terminal
--- vim.api.nvim_set_keymap("n", "<C-t>", ":Neotree toggle<CR>", { noremap = true, silent = true })

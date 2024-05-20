@@ -52,5 +52,6 @@ windows:
       panes:
         - cd hasura/hasura && update_hasura && hasura console
         - cd admin-ui && npm run start:standalone
+        - ngrok http --region=us --domain=tucker-beauchamp-nmg.ngrok.io --host-header=rewrite https://graphql.local.platform2pt0api.com
   - misc:  
 

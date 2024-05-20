@@ -15,7 +15,6 @@ return {
 		require("telescope").setup({
 			defaults = {
 				hidden = true,
-
 				path_display = { truncate = 5 },
 				layout_config = {
 					prompt_position = "bottom",

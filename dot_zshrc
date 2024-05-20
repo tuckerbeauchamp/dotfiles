@@ -106,3 +106,8 @@ eval "`fnm env`"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:/home/tucker/.local/bin
